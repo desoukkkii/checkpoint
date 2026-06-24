@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Website - Home</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Header / Navigation -->
@@ -13,10 +18,26 @@
         <div class="logo">
           <h1>MySite</h1>
         </div>
-        <ul class="nav-links">
+
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <!-- Dark Mode Toggle -->
+          <li>
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Toggle theme"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
@@ -25,7 +46,7 @@
     <main>
       <section class="hero">
         <h1>Welcome to My Website</h1>
-        <p>This is a static website built with HTML and CSS</p>
+        <p>This is a static website built with HTML, CSS, and JavaScript</p>
         <a href="about.html" class="btn">Learn More</a>
       </section>
 
@@ -39,15 +60,21 @@
           <p>Works perfectly on all devices and screen sizes</p>
         </div>
         <div class="feature-card">
-          <h3>Semantic HTML</h3>
-          <p>Well-structured code following best practices</p>
+          <h3>Interactive</h3>
+          <p>Now with JavaScript for dynamic interactions</p>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2026 My Website. All rights reserved.</p>
+      <p>
+        &copy; <span id="currentYear">2026</span> My Website. All rights
+        reserved.
+      </p>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>

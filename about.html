@@ -5,23 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Website - About</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
-    <!-- Header / Navigation -->
     <header>
       <nav>
         <div class="logo">
           <h1>MySite</h1>
         </div>
-        <ul class="nav-links">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" class="active">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li>
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Toggle theme"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
       <section class="about-section">
         <h1>About Us</h1>
@@ -34,9 +48,9 @@
               through clean code and thoughtful design.
             </p>
             <p>
-              This project showcases our skills in HTML and CSS, demonstrating
-              how static web pages can be both visually appealing and
-              well-structured.
+              This project showcases our skills in HTML, CSS, and JavaScript,
+              demonstrating how static web pages can be both visually appealing
+              and interactive.
             </p>
 
             <h2>Our Values</h2>
@@ -56,9 +70,13 @@
       </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-      <p>&copy; 2026 My Website. All rights reserved.</p>
+      <p>
+        &copy; <span id="currentYear">2026</span> My Website. All rights
+        reserved.
+      </p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
